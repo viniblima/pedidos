@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar color = 'primary'>
+    <ion-title>{{opcao.nome}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style = "background-color:	#0A0D14;">
+    <br/><br/><br/><br/>
+  <ion-card *ngFor = 'let cardapio of cardapio' style="background-color: #0A0D14">
+    <img src = "{{cardapio.imgurl}}" (click)='seleciona(cardapio)'/>
+    <br/><br/><br/>
+  </ion-card>
+
+</ion-content>

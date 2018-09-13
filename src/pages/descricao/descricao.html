@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Descricao</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+  <strong>Nome: {{produto.nome}}</strong><br/>
+    <strong>Preço: {{produto.preco}}</strong><br/>
+    <strong>Id: {{produto.id}}</strong><br/>
+    
+</ion-card>
+<button (click)='adicionaCarrinho()'>Adicionar ao carrinho</button>
+
+<button (click)='esvaziarCarrinho()'>Esvaziar carrinho</button>
+</ion-content>

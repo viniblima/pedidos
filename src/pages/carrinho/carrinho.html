@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color = 'primary'>
+    <ion-title>Carrinho</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style = "background-color:	#0A0D14;color: white;">
+  
+    <ion-card style='background-color: #D9B056; color: white;' *ngFor='let carrinho of carrinhos'>
+      <ion-list id="pedidos-list5">
+          <ion-item color="none" id="pedidos-list-item10" style = "background-color:#D9B056" class="item-borderless">  
+            <ion-icon name="restaurant" item-left style ='color:white;'></ion-icon>
+            <h1 style="color: white;">Pedido: {{carrinho.nome}}</h1>
+            <br/>
+            <h1 style="color: white;">{{carrinho.pergunta}} {{carrinho.observacao}}</h1>
+          </ion-item>
+      </ion-list>  
+    </ion-card>
+      <br/><br/>
+      <br/>
+      <h4 style='color:white;'>R$ {{valor_total}}</h4>
+<button ion-button color="primary" (click)='fazerPedido()' block>Fazer Pedido</button>
+<br/><br/>
+<button ion-button color="primary" (click)='esvaziarCarrinho()' block>Esvaziar Carrinho</button>
+<br/><br/>
+<button ion-button color="primary" (click)='goToHome()' block>Home</button>
+</ion-content>

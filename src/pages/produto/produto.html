@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar color = 'primary'>
+    <ion-title>{{cardapio.nome}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style = "background-color:	#0A0D14;color: white;">
+  <br/><br/><br/><br/>
+  <img src='{{cardapio.imgurl}}'/>
+  <br/><br/><br/>
+  <h1>
+  {{cardapio.descricao}}
+  </h1>
+  <br/><br/>
+  <h1>{{pergunta}}</h1>
+  <br/>
+  
+    <ion-item>
+      <ion-label>Tipo de pão</ion-label>
+    <ion-select [(ngModel)]='cardapio.observacao'>
+      <ion-option *ngFor='let resposta of resposta' value ='{{resposta.resposta}}'  name = 'observacao'>{{resposta.resposta}}</ion-option>
+    </ion-select>
+    </ion-item>
+    <br/>
+    <button ion-button color="primary" (click)='adicionaCarrinho()' block>Adicionar ao Carrinho</button>
+    <br/><br/>
+    <button ion-button color="primary" (click)='goToCarrinho()' block>Carrinho</button>
+</ion-content>

@@ -1,0 +1,10 @@
+
+
+<ion-content padding style = "background-color:	#0A0D14;">
+  <img src = 'http://vservices.com.br/topo_card.png'/>
+  <br/><br/><br/><br/>
+  <ion-card *ngFor = 'let opcao of opcao' style='background-color: #0A0D14'>
+    <img src = "{{opcao.imgurl}}" (click) = "seleciona(opcao)"/>
+    <br/><br/><br/>
+  </ion-card>
+</ion-content>
